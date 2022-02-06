@@ -34,7 +34,7 @@ jobs:
         run: 'packer validate -syntax-only packer.pkr.hcl'
 
       - name: Initialize Packer modules
-        run: 'packer init .'
+        run: 'packer init config.pkr.hcl'
 
       - name: Build Artifact
         run: 'packer build -color=false -on-error=cleanup packer.pkr.hcl'
