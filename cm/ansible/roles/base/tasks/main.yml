@@ -7,8 +7,6 @@
      - screen
      - bash
      - open-vm-tools
-     - aptitude
-     - mlocate
      - tzdata
      - curl
      - software-properties-common
