@@ -1,18 +1,5 @@
 ---
-- name: main | Install necessities
-  apt:
-    pkg:
-     - vim
-     - unattended-upgrades
-     - screen
-     - bash
-     - open-vm-tools
-     - tzdata
-     - curl
-     - software-properties-common
-     - unzip
-    update_cache: yes
-    state: latest
+- import_tasks: apt.yml
 
 #- name: Set timezone to America/Los_Angeles (common-ubuntu:ntp.yml)
 #  timezone:
@@ -21,3 +8,4 @@
 - import_tasks: python3.yml
 - import_tasks: ansible.yml
 - import_tasks: awscli.yml
+- import_tasks: reboot.yml
